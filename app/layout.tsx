@@ -15,9 +15,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className="antialiased">
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

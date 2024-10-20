@@ -23,46 +23,36 @@ const NonMemoizedMarkdown = ({ children }: { children: string }) => {
         </code>
       );
     },
-    ol: ({ node, children, ...props }: any) => {
-      return (
-        <ol className="list-decimal list-outside ml-4" {...props}>
-          {children}
-        </ol>
-      );
-    },
-    li: ({ node, children, ...props }: any) => {
-      return (
-        <li className="py-1" {...props}>
-          {children}
-        </li>
-      );
-    },
-    ul: ({ node, children, ...props }: any) => {
-      return (
-        <ul className="list-decimal list-outside ml-4" {...props}>
-          {children}
-        </ul>
-      );
-    },
-    strong: ({ node, children, ...props }: any) => {
-      return (
-        <span className="font-semibold" {...props}>
-          {children}
-        </span>
-      );
-    },
-    a: ({ node, children, ...props }: any) => {
-      return (
-        <Link
-          className="text-blue-500 hover:underline"
-          target="_blank"
-          rel="noreferrer"
-          {...props}
-        >
-          {children}
-        </Link>
-      );
-    },
+    ol: ({ node, children, ...props }: any) => (
+      <ol className="list-decimal list-outside ml-4" {...props}>
+        {children}
+      </ol>
+    ),
+    li: ({ node, children, ...props }: any) => (
+      <li className="py-1" {...props}>
+        {children}
+      </li>
+    ),
+    ul: ({ node, children, ...props }: any) => (
+      <ul className="list-decimal list-outside ml-4" {...props}>
+        {children}
+      </ul>
+    ),
+    strong: ({ node, children, ...props }: any) => (
+      <span className="font-semibold" {...props}>
+        {children}
+      </span>
+    ),
+    a: ({ node, children, ...props }: any) => (
+      <Link
+        className="text-blue-500 hover:underline"
+        target="_blank"
+        rel="noreferrer"
+        {...props}
+      >
+        {children}
+      </Link>
+    ),
   };
 
   return (

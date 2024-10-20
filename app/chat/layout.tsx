@@ -13,24 +13,24 @@ export const metadata: Metadata = {
 };
 
 export default async function ChatLayout({
-                                           children,
-                                         }: Readonly<{
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="ru">
-    <body className="antialiased">
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <Toaster position="top-center" />
-      <Navbar />
-      {children}
-    </ThemeProvider>
-    </body>
+      <body className="antialiased">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Toaster position="top-center" />
+          <Navbar />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
